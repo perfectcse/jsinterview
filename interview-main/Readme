@@ -1,0 +1,178 @@
+| Area                   | What they check                           | Example Questions                                                          |
+| ---------------------- | ----------------------------------------- | -------------------------------------------------------------------------- |
+| **HTML/CSS/JS**        | Basics + problem solving                  | Explain difference between `var`, `let`, `const`? How do you center a div? |
+| **ReactJS**            | Component, props, state, lifecycle, hooks | What are props? What is `useEffect`?                                       |
+| **Node.js / Express**  | Backend API understanding                 | How to handle GET & POST routes?                                           |
+| **Database (MongoDB)** | CRUD & schema design                      | How to insert/find data in MongoDB?                                        |
+| **Logical JS**         | Code thinking                             | Write code to count vowels, reverse a string, find duplicates              |
+| **Project Talk**       | How you’ve built things                   | Explain your project & your role                                           |
+| **HR Lite**            | Communication & attitude                  | “Tell me about yourself”, “Why IVTEX?”                                     |
+
+
+| Feature               | Example                       | Description                |
+| --------------------- | ----------------------------- | -------------------------- |
+| **Template literals** | `` `Hello ${name}` ``         | String interpolation       |
+| **Destructuring**     | `const {x,y} = obj`           | Extract values easily      |
+| **Spread Operator**   | `{...obj}`                    | Copy/merge objects         |
+| **Rest Operator**     | `(...args)`                   | Collect multiple arguments |
+| **Default Params**    | `function greet(name="User")` | Default function value     |
+| **Modules**           | `import/export`               | Split code across files    |
+
+
+
+# IVTEX Full Stack Developer Interview – Complete ReadMe
+
+**Company:** IVTEX Corporate Solutions Private Limited  
+**Role:** Full Stack Developer  
+**Location:** Bhubaneswar  
+**Interview Date:** 7th November 2025, 3:00 PM – 5:00 PM  
+**Required Skills:** React.js, SQL, Web Technologies (HTML, CSS, JS)  
+**Salary Package:** 1.4 – 2 LPA  
+
+---
+
+## 1️⃣ JavaScript (JS) Core Concepts
+
+### Variables & Scope
+- `var`: Function-scoped, can be re-declared  
+- `let`: Block-scoped, cannot be re-declared  
+- `const`: Block-scoped, value cannot be reassigned  
+
+### Functions
+- Regular, arrow, callback, anonymous  
+- Arrow functions don’t bind their own `this`
+
+### Arrays & Strings
+- Methods: `map()`, `filter()`, `reduce()`, `includes()`, `split()`, `join()`  
+- Mini programs: reverse string, count vowels, merge arrays  
+
+### Objects
+- Destructuring, spread operator, key-value pairs  
+
+### Promises & Async/Await
+- Handle async operations  
+- `.then()` for success, `.catch()` for errors  
+- `async/await` for cleaner syntax  
+
+### DOM & Events
+- `getElementById()`, `querySelector()`, `innerHTML`, `style`  
+- Event handling: `onclick`, `onchange`, `addEventListener()`  
+- Event bubbling & capturing  
+- Inline vs addEventListener  
+
+### ES6 Features
+- Template literals, destructuring, spread/rest operators, default parameters  
+- Modules: `import/export`  
+
+---
+
+## 2️⃣ React.js Core Concepts
+
+### Components & JSX
+- Functional components return JSX  
+- Reusable UI blocks  
+
+### Props & State
+- Props: Read-only, parent → child  
+- State: Mutable, internal to component (`useState`)  
+
+### Hooks
+- `useState()`: State management  
+- `useEffect()`: Lifecycle equivalent in functional components  
+
+### Conditional Rendering
+- Ternary operator (`condition ? true : false`)  
+
+### Event Handling
+- `onClick`, `onChange`, etc.  
+- Pass function references, not calls  
+
+### Props Drilling
+- Passing data through multiple layers  
+
+### Mini React Projects
+- Toggle bulb ON/OFF with button  
+- Counter app  
+- Display list of courses  
+
+---
+
+## 3️⃣ SQL Theoretical Questions
+
+- SQL: Structured Query Language  
+- Types: DDL, DML, DCL, TCL  
+- `WHERE` vs `HAVING`  
+- JOINs: INNER, LEFT, RIGHT, FULL  
+- Keys: Primary Key, Foreign Key, UNIQUE, NOT NULL  
+- Aggregate functions: COUNT, SUM, AVG, MAX, MIN  
+- `GROUP BY`, `ORDER BY`  
+- Subqueries: Correlated vs Non-correlated  
+- `TRUNCATE` vs `DELETE`  
+- Views, aliases  
+
+---
+
+## 4️⃣ Web Technologies
+
+### HTML
+- Semantic tags, forms, attributes  
+
+### CSS
+- Flexbox, Grid, Positioning, Media queries  
+
+### JavaScript
+- DOM manipulation, client-side validation  
+
+### HTTP / APIs
+- GET vs POST  
+- Status codes: 200, 201, 400, 404, 500  
+- REST basics  
+
+---
+
+## 5️⃣ Backend / Node.js & Express
+
+### Node.js
+- JS runtime on server, single-threaded, non-blocking  
+- npm: package manager  
+
+### Express.js
+- Framework for web apps & APIs  
+- Middleware: Logging, authentication, parsing JSON  
+- `app.get()` vs `app.post()`  
+
+### REST API
+- Stateless APIs using HTTP methods  
+- JSON format for data exchange  
+- REST vs SOAP  
+
+### Database Interaction
+- Connect Node.js with SQL/NoSQL  
+- CRUD operations  
+
+### Other Concepts
+- CORS  
+- Synchronous vs asynchronous operations  
+- Middleware for authentication (e.g., JWT)  
+
+---
+
+## 6️⃣ Interview Tips
+- Focus on core concepts  
+- Explain why code works  
+- Keep answers short & clear  
+- Prepare mini examples for JS and React  
+- Know HTTP methods, SQL basics, REST API concepts  
+
+---
+
+## ✅ Final Quick Revision Flow
+1. JS fundamentals → Arrays, Objects, Promises  
+2. DOM & Event handling  
+3. ES6 features  
+4. React → Components, Props, State, Hooks  
+5. Conditional rendering + Event handling  
+6. SQL → Theoretical questions  
+7. Web tech → HTML, CSS, HTTP, APIs  
+8. Backend → Node.js, Express.js, REST, Database  
+9. HR → “Tell me about yourself”, “Why IVTEX?”  

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM + Event Handling Practice - Visha</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 40px;
+      background-color: #fafafa;
+    }
+    h2 {
+      color: #333;
+    }
+    .card {
+      width: 300px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    .card:hover {
+      box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
+    }
+    .product {
+      font-size: 20px;
+      font-weight: bold;
+      color: #007BFF;
+    }
+    button {
+      margin: 10px;
+      padding: 8px 14px;
+      font-size: 15px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+    }
+    #addBtn { background-color: #28a745; color: white; }
+    #likeBtn { background-color: #007BFF; color: white; }
+    #resetBtn { background-color: #dc3545; color: white; }
+    #message {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>🛒 Shopping Card Example (DOM + Events)</h2>
+
+  <div class="card" id="card">
+    <p class="product" id="productName">Product: Wireless Earbuds</p>
+    <p>Price: ₹1,499</p>
+    <button id="likeBtn">❤️ Like</button>
+    <button id="addBtn">➕ Add to Cart</button>
+  </div>
+
+  <button id="resetBtn">🔄 Reset</button>
+  <p id="message">Click buttons to see DOM in action!</p>
+
+  <script>
+    const msg = document.getElementById("message");
+    const card = document.getElementById("card");
+    const addBtn = document.getElementById("addBtn");
+    const likeBtn = document.getElementById("likeBtn");
+    const resetBtn = document.getElementById("resetBtn");
+
+    // 1️⃣ Handle Like Button (Stop Bubbling)
+    likeBtn.addEventListener("click", (event) => {
+      msg.innerText = "💙 You liked this product!";
+      likeBtn.style.backgroundColor = "#17a2b8";
+      event.stopPropagation(); // stop bubbling to card
+    });
+
+    // 2️⃣ Handle Add to Cart Button (Stop Bubbling)
+    addBtn.addEventListener("click", (event) => {
+      msg.innerText = "✅ Added to cart successfully!";
+      addBtn.style.backgroundColor = "#218838";
+      addBtn.innerText = "✔ Added";
+      event.stopPropagation();
+    });
+
+    // 3️⃣ Handle Card Click (Bubbling Example)
+    card.addEventListener("click", () => {
+      msg.innerText = "🟡 Card clicked — event bubbled up!";
+      card.style.borderColor = "#ffc107";
+    });
+
+    // 4️⃣ Handle Reset (Change Back Everything)
+    resetBtn.addEventListener("click", () => {
+      msg.innerText = "Page reset! Try again 🧹";
+      likeBtn.style.backgroundColor = "#007BFF";
+      addBtn.style.backgroundColor = "#28a745";
+      addBtn.innerText = "➕ Add to Cart";
+      card.style.borderColor = "#ccc";
+    });
+
+    // 5️⃣ Capturing Example (Runs before bubbling)
+    document.addEventListener("click", () => {
+      console.log("🔍 Document Capturing Phase");
+    }, true); // true = capturing phase
+  </script>
+
+</body>
+</html>
