@@ -1,22 +1,23 @@
-/* Styling the main container */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
 .container {
-    background-color: lightblue;   /* Background color */
-    padding: 20px;                 /* Space inside container */
-    text-align: center;            /* Center align content */
-    margin-top: 50px;              /* Space from top */
+    padding: 20px;
 }
 
-/* Styling the button */
-.btn {
-    background-color: blue;        /* Button background */
-    color: white;                  /* Text color */
-    padding: 10px 15px;            /* Button size */
-    border: none;                  /* Remove border */
-    cursor: pointer;               /* Pointer on hover */
-    font-size: 16px;               /* Text size */
+button {
+    padding: 10px 15px;
+    margin: 10px;
+    cursor: pointer;
 }
 
-/* Hover effect */
-.btn:hover {
-    background-color: darkblue;    /* Change color on hover */
+.red {
+    color: red;
+}
+
+.blue {
+    color: blue;
 }

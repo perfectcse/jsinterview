@@ -1,25 +1,31 @@
-// Selecting elements from DOM
-// querySelector selects first matching element
-const button = document.querySelector(".btn");
+// Selecting elements
+const counterText = document.getElementById("counter");
+const increaseBtn = document.getElementById("increaseBtn");
+const decreaseBtn = document.getElementById("decreaseBtn");
+const colorBtn = document.getElementById("colorBtn");
 const title = document.getElementById("title");
 
-// Variable to track click count
-let clickCount = 0;
+// Global variable
+let count = 0;
 
-// Function to handle button click
-function handleClick() {
-
-    // Increment click count
-    clickCount++;
-
-    // Change heading text dynamically (DOM manipulation)
-    title.innerText = "Button Clicked " + clickCount + " times";
-
-    // Log message in console
-    console.log("Button was clicked");
+// Increase function
+function increase() {
+    count++;
+    counterText.innerText = "Count: " + count;
 }
 
-// Adding event listener to button
-// "click" is event type
-// handleClick is callback function
-button.addEventListener("click", handleClick);
+// Decrease function
+function decrease() {
+    count--;
+    counterText.innerText = "Count: " + count;
+}
+
+// Change color function
+function changeColor() {
+    title.classList.toggle("red");
+}
+
+// Event listeners
+increaseBtn.addEventListener("click", increase);
+decreaseBtn.addEventListener("click", decrease);
+colorBtn.addEventListener("click", changeColor);
