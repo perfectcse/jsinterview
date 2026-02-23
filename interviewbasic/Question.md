@@ -115,3 +115,17 @@ DOM manipulation
 Event handling
 
 These are 100% asked in fresher interviews.
+
+Closure → Function remembers outer variables
+
+Execution Context → Memory phase + Execution phase
+
+Call Stack → Manages function calls (LIFO)
+
+Single-threaded → One task at a time
+
+TDZ → Cannot access let/const before declaration
+
+Declaration → Fully hoisted
+
+Expression → Not fully hoisted

@@ -1,31 +1,44 @@
-// Selecting elements
+// DOM Selection
 const counterText = document.getElementById("counter");
 const increaseBtn = document.getElementById("increaseBtn");
 const decreaseBtn = document.getElementById("decreaseBtn");
+const resetBtn = document.getElementById("resetBtn");
 const colorBtn = document.getElementById("colorBtn");
-const title = document.getElementById("title");
+const container = document.querySelector(".container");
 
-// Global variable
-let count = 0;
+// Closure Counter Function
+function createCounter() {
+    let count = 0;  // Private variable (Closure)
 
-// Increase function
-function increase() {
-    count++;
-    counterText.innerText = "Count: " + count;
+    return {
+        increase: function() {
+            count++;
+            updateUI();
+        },
+        decrease: function() {
+            count--;
+            updateUI();
+        },
+        reset: function() {
+            count = 0;
+            updateUI();
+        }
+    };
+
+    function updateUI() {
+        counterText.innerText = "Count: " + count;
+    }
 }
 
-// Decrease function
-function decrease() {
-    count--;
-    counterText.innerText = "Count: " + count;
-}
+// Creating counter instance
+const counter = createCounter();
 
-// Change color function
-function changeColor() {
-    title.classList.toggle("red");
-}
+// Event Listeners
+increaseBtn.addEventListener("click", counter.increase);
+decreaseBtn.addEventListener("click", counter.decrease);
+resetBtn.addEventListener("click", counter.reset);
 
-// Event listeners
-increaseBtn.addEventListener("click", increase);
-decreaseBtn.addEventListener("click", decrease);
-colorBtn.addEventListener("click", changeColor);
+// Toggle Dark Mode
+colorBtn.addEventListener("click", function() {
+    container.classList.toggle("dark");
+});
