@@ -1,131 +1,152 @@
-🟢 🔹 BASIC HTML Questions
-1️⃣ What is the difference between <head> and <body>?
+🟢 SECTION 1: Core Fundamentals
+1. What is JavaScript?
+JavaScript is a single-threaded, interpreted language used to build interactive web applications.
 
-👉 Head contains metadata, CSS, title.
-👉 Body contains visible content.
+2. Difference between var, let, const?
+var → function scoped, hoisted as undefined
+let → block scoped, TDZ
+const → block scoped, cannot reassign
 
-2️⃣ Why do we place <script> at the bottom?
+3. What is Hoisting?
+JavaScript moves variable and function declarations to the top during memory creation phase.
 
-👉 So HTML loads first before JS executes.
+4. What is TDZ?
+Temporal Dead Zone is the time between entering scope and declaration of let/const.
 
-3️⃣ What is the purpose of meta viewport?
+5. Difference between == and ===?
+== → value comparison
+=== → value + type comparison
 
-👉 Makes webpage responsive.
+6. null vs undefined?
+undefined → declared but not assigned
+null → intentionally empty value
 
-🔵 🔹 CSS Questions
-4️⃣ Difference between class and id?
-
-class → reusable
-
-id → unique
-
-5️⃣ What is box model?
-
-👉 Content + Padding + Border + Margin
-
-6️⃣ Difference between inline, internal, and external CSS?
-🟡 🔹 JavaScript Basics Questions
-7️⃣ Difference between var, let, const?
-
-(Most asked)
-
-8️⃣ What is hoisting?
-9️⃣ Difference between == and ===?
-🔟 What is null vs undefined?
-🟠 🔹 Functions
-11️⃣ Difference between function declaration and function expression?
-12️⃣ What is arrow function?
-13️⃣ What is a callback function?
-
-Example:
-
-button.addEventListener("click", handleClick);
-
-
-handleClick is callback.
-
-🔴 🔹 DOM & Events (Very Important)
-14️⃣ What is DOM?
-
-👉 Document Object Model — representation of HTML as tree structure.
-
-15️⃣ How do you select elements in JS?
-
-getElementById
-
-querySelector
-
-querySelectorAll
-
-16️⃣ What is event listener?
-17️⃣ Difference between onclick and addEventListener?
-
-👉 addEventListener is professional & allows multiple events.
-
-🟣 🔹 Scope & Execution
-18️⃣ What is scope?
-
+7. What is Scope?
+Scope defines where variables are accessible.
 Global
-
 Function
-
 Block
 
-19️⃣ What is Temporal Dead Zone?
-20️⃣ Explain hoisting with example.
-🔥 Most Important Practical Question
-21️⃣ Build a button click counter.
+8. What is Variable Shadowing?
+When a local variable hides a global variable with same name.
 
-They may ask you to:
+🔵 SECTION 2: Functions & Execution
 
-Change text on click
+9. What is Execution Context?
+Environment where JS code runs.
 
-Toggle color
+Two phases:
+Memory creation phase
+Execution phase
 
-Count clicks
+10. What is Call Stack?
+A LIFO structure that tracks function execution.
 
-Hide/show element
+11. Difference between Function Declaration & Expression?
+Declaration:
+Fully hoisted
+Callable before definition
+Expression:
+Not fully hoisted
 
-You already did this 💪
+12. What is a Callback?
+A function passed as argument to another function.
 
-⭐ If Interview is For React / Frontend
+13. What is Closure?
+A function that remembers its outer scope variables even after outer function execution.
 
-They may also ask:
+14. Why are variables private in closur
+Because they exist in outer function scope and are not directly accessible.
 
-What happens when browser loads a webpage?
+🟣 SECTION 3: DOM & Events
 
-Explain event flow.
+15. What is DOM?
+Document Object Model – structured representation of HTML.
 
-What is event bubbling?
+16. How do you select elements?
+getElementById
+querySelector
+querySelectorAll
 
-What is execution context?
+17. What is Event Handling?
+Responding to user actions using event listeners.
 
-🚀 Vishal — Important
+18. Difference between onclick and addEventListener?
+addEventListener allows multiple handlers and is professional approach.
 
-From what you learned, focus on:
+🔴 SECTION 4: this Keyword
 
-var vs let vs const
+19. What is this?
+this refers to the object calling the function.
 
-Hoisting
+20. this in normal function?
+In browser → window (non-strict mode)
 
+21. this inside object method?
+Refers to that object.
+
+22. this in arrow function?
+Arrow functions do NOT have their own this.
+They inherit from surrounding scope.
+
+🟡 SECTION 5: Asynchronous JavaScript
+
+23. Why is JS single-threaded?
+Because it has one call stack and executes one task at a time.
+
+24. What is Event Loop?
+Mechanism that handles async callbacks by checking if call stack is empty before executing queued tasks.
+
+25. What is setTimeout?
+Schedules a function to execute after delay, handled via Web APIs.
+
+26. What is Callback Queue?
+Queue where async callbacks wait before execution.
+
+27. What is Promise?
+An object representing eventual completion or failure of async operation.
+States:
+Pending
+Fulfilled
+Rejected
+
+28. What is Async/Await?
+Syntactic sugar over promises that makes async code look synchronous.
+
+29. What is Microtask vs Macrotask?
+Microtasks:
+Promise callbacks
+Faster execution
+Macrotasks:
+setTimeout
+setInterval
+Microtasks execute before macrotasks.
+
+✅ Is JavaScript Concept Complete?
+For frontend / React interviews (fresher to junior level) →
+👉 YES, your core JS foundation is complete.
+................
+You have covered:
+🟢 Fundamentals
+Variables (var, let, const)
+Data types
+Operators
+Functions
 Scope
-
+................
+🔵 Intermediate
+Hoisting
+TDZ
+Execution Context
+Call Stack
+Closures
+Variable shadowing
+..................
+🟣 Advanced Basics
+this keyword
+Event loop
+setTimeout
+Async behavior
+Promises (intro level)
 DOM manipulation
-
-Event handling
-
-These are 100% asked in fresher interviews.
-
-Closure → Function remembers outer variables
-
-Execution Context → Memory phase + Execution phase
-
-Call Stack → Manages function calls (LIFO)
-
-Single-threaded → One task at a time
-
-TDZ → Cannot access let/const before declaration
-
-Declaration → Fully hoisted
-
-Expression → Not fully hoisted
+That is a strong JavaScript base.

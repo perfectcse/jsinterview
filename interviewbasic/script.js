@@ -1,44 +1,48 @@
-// DOM Selection
-const counterText = document.getElementById("counter");
-const increaseBtn = document.getElementById("increaseBtn");
-const decreaseBtn = document.getElementById("decreaseBtn");
-const resetBtn = document.getElementById("resetBtn");
-const colorBtn = document.getElementById("colorBtn");
-const container = document.querySelector(".container");
+// Selecting elements
+const normalBtn = document.getElementById("normalBtn");
+const arrowBtn = document.getElementById("arrowBtn");
+const asyncBtn = document.getElementById("asyncBtn");
+const output = document.getElementById("output");
 
-// Closure Counter Function
-function createCounter() {
-    let count = 0;  // Private variable (Closure)
 
-    return {
-        increase: function() {
-            count++;
-            updateUI();
-        },
-        decrease: function() {
-            count--;
-            updateUI();
-        },
-        reset: function() {
-            count = 0;
-            updateUI();
-        }
-    };
+// 1️⃣ THIS KEYWORD DEMO
 
-    function updateUI() {
-        counterText.innerText = "Count: " + count;
+const user = {
+    name: "Vishal",
+
+    normalFunction: function() {
+        // Here 'this' refers to user object
+        output.innerText = "Normal Function this.name = " + this.name;
+    },
+
+    arrowFunction: () => {
+        // Arrow function does NOT have its own this
+        output.innerText = "Arrow Function this.name = " + this.name;
     }
-}
+};
 
-// Creating counter instance
-const counter = createCounter();
 
 // Event Listeners
-increaseBtn.addEventListener("click", counter.increase);
-decreaseBtn.addEventListener("click", counter.decrease);
-resetBtn.addEventListener("click", counter.reset);
+normalBtn.addEventListener("click", function() {
+    user.normalFunction();
+});
 
-// Toggle Dark Mode
-colorBtn.addEventListener("click", function() {
-    container.classList.toggle("dark");
+arrowBtn.addEventListener("click", function() {
+    user.arrowFunction();
+});
+
+
+// 2️⃣ ASYNC + EVENT LOOP DEMO
+
+asyncBtn.addEventListener("click", function() {
+
+    output.innerText = "Check Console for Async Order";
+
+    console.log("Start");
+
+    setTimeout(function() {
+        console.log("Inside setTimeout");
+    }, 0);
+
+    console.log("End");
 });
