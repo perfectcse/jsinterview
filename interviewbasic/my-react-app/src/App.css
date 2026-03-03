@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  text-align: center;
+  padding-top: 60px;
+  min-height: 100vh;
+  transition: 0.3s ease;
+}
+
+.light {
+  background-color: #f4f4f4;
+  color: black;
+}
+
+.dark {
+  background-color: #222;
+  color: white;
+}
+
+button {
+  padding: 10px 15px;
+  margin: 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.increase {
+  background-color: green;
+  color: white;
+}
+
+.decrease {
+  background-color: red;
+  color: white;
+}
+
+.reset {
+  background-color: gray;
+  color: white;
+}
+
+.toggle {
+  background-color: blue;
+  color: white;
+}
