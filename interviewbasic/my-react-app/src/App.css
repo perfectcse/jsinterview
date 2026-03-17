@@ -1,50 +1,91 @@
+/* Reset */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
 }
 
+/* Main Container */
 .container {
   text-align: center;
-  padding-top: 60px;
+  padding-top: 50px;
   min-height: 100vh;
-  transition: 0.3s ease;
 }
 
-.light {
-  background-color: #f4f4f4;
-  color: black;
+/* Heading */
+h1 {
+  margin-bottom: 20px;
 }
 
-.dark {
-  background-color: #222;
-  color: white;
+/* Input Box Section */
+.input-box {
+  margin-top: 20px;
 }
 
+/* Input Field */
+input {
+  padding: 10px;
+  width: 220px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+/* Buttons (General) */
 button {
-  padding: 10px 15px;
+  padding: 8px 12px;
   margin: 8px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 14px;
-}
-
-.increase {
-  background-color: green;
+  background-color: #3498db;
   color: white;
+  transition: 0.2s;
 }
 
-.decrease {
+button:hover {
+  background-color: #2980b9;
+}
+
+/* Todo List */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+/* List Item */
+li {
+  margin: 10px auto;
+  width: 250px;
+  padding: 8px;
+  background: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Delete Button */
+li button {
   background-color: red;
-  color: white;
 }
 
-.reset {
-  background-color: gray;
-  color: white;
+li button:hover {
+  background-color: darkred;
 }
 
-.toggle {
-  background-color: blue;
-  color: white;
+/* API Users Section */
+h2 {
+  margin-top: 30px;
+}
+
+/* Divider */
+hr {
+  margin: 30px 0;
+}
+
+/* Loading Text */
+p {
+  font-weight: bold;
 }

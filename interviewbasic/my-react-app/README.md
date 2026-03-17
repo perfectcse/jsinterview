@@ -62,3 +62,43 @@ React re-renders when:
 State changes
 Props change
 Parent component re-renders
+
+...............................................
+🚀 What You Learned in React Level-2 (Today)
+⚛️ 1️⃣ useEffect Hook (Most Important)
+
+✅ What you learned:
+
+.Handles side effects
+.Runs after render
+.Controlled by dependency array
+
+🎯 Interview Line:
+useEffect is used to handle side effects like API calls, timers, and subscriptions
+
+🧠 2️⃣ Dependency Array Concept
+This is VERY important.
+You learned:
+[] → runs once
+[count] → runs when count changes
+no array → runs always
+👉 This controls React behavior.
+
+🔁 3️⃣ React Re-render Understanding
+You now understand:
+React re-renders when:
+State changes
+Props change
+
+📊 Your Current React Level
+After today:
+You now know:
+✔ JSX
+✔ Components
+✔ Props
+✔ useState
+✔ Event handling
+✔ External CSS
+✔ useEffect
+✔ Re-render behavior
+............
