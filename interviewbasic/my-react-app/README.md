@@ -101,4 +101,47 @@ You now know:
 ✔ External CSS
 ✔ useEffect
 ✔ Re-render behavior
-............
+...........
+
+⚛️ REACT CORE (Interview Answers)
+
+1️⃣ What is JSX?
+JSX is a syntax extension in React that allows us to write HTML-like code inside JavaScript. It is used to describe the UI structure and gets converted into JavaScript using React.createElement().
+
+2️⃣ What are Components?
+Components are reusable and independent pieces of UI in React. They help in breaking the UI into smaller parts, making the code more maintainable and scalable.
+
+3️⃣ What are Props?
+Props are read-only inputs passed from a parent component to a child component to share data. Props are immutable and cannot be modified by the child.
+
+5️⃣ What is useState?
+
+useState is a React Hook that allows functional components to manage and update state. When the state changes, React re-renders the component.
+
+6️⃣ What is a Controlled Component?
+
+A controlled component is a form element whose value is controlled by React state using useState and updated through onChange events.
+
+7️⃣ What is Event Handling in React?
+
+Event handling in React is the process of responding to user actions like clicks or input changes using event handlers such as onClick and onChange.
+
+8️⃣ What is Dynamic UI Update?
+Dynamic UI update means React automatically updates the UI whenever the state or props change, without manually manipulating the DOM.
+
+...........................................
+🧠 BONUS (VERY IMPORTANT FOR INTERVIEW)
+9️⃣ Why does React re-render?
+React re-renders a component when its state or props change. It updates the Virtual DOM and efficiently reflects changes in the real DOM.
+
+🔟 Why not modify state directly?
+We should not modify state directly because React relies on state changes to detect updates. Direct mutation may not trigger re-rendering.
+
+1️⃣1️⃣ What is key in list?
+Answer:
+The key prop helps React identify which elements have changed, been added, or removed, improving rendering performance.
+
+1️⃣2️⃣ What is map() in React?
+Answer:
+map() is used to iterate over arrays and render elements dynamically in React.
+

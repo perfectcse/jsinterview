@@ -89,3 +89,6 @@ hr {
 p {
   font-weight: bold;
 }
+li span {
+  margin-right: 10px;
+}

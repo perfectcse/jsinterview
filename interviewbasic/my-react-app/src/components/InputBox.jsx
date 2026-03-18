@@ -4,25 +4,51 @@ function InputBox() {
 
   const [text, setText] = useState("");
   const [items, setItems] = useState([]);
+  const [editIndex, setEditIndex] = useState(null);
 
-  // Add item
+  // Add or Update item
   const addItem = () => {
     if (text.trim() === "") return;
 
-    setItems([...items, text]);
+    if (editIndex !== null) {
+      const updatedItems = [...items];
+      updatedItems[editIndex] = text;
+      setItems(updatedItems);
+      setEditIndex(null);
+    } else {
+      setItems([...items, { text, completed: false }]);
+    }
+
     setText("");
   };
 
   // Delete item
   const deleteItem = (index) => {
-    const newItems = items.filter((_, i) => i !== index);
-    setItems(newItems);
+    setItems(items.filter((_, i) => i !== index));
+  };
+
+  // Edit item
+  const editItem = (index) => {
+    setText(items[index].text);
+    setEditIndex(index);
+  };
+
+  // Toggle complete
+  const toggleComplete = (index) => {
+    const updatedItems = [...items];
+    updatedItems[index].completed = !updatedItems[index].completed;
+    setItems(updatedItems);
+  };
+
+  // Clear all
+  const clearAll = () => {
+    setItems([]);
   };
 
   return (
     <div className="input-box">
 
-      <h2>Todo App</h2>
+      <h2>App 🚀</h2>
 
       <input
         type="text"
@@ -31,15 +57,29 @@ function InputBox() {
         onChange={(e) => setText(e.target.value)}
       />
 
-      <button onClick={addItem}>Add</button>
+      <button onClick={addItem}>
+        {editIndex !== null ? "Update" : "Add"}
+      </button>
+
+      <button onClick={clearAll}>Clear All</button>
 
       <ul>
         {items.map((item, index) => (
           <li key={index}>
-            {item}
-            <button onClick={() => deleteItem(index)}>
-              Delete
-            </button>
+
+            <span
+              onClick={() => toggleComplete(index)}
+              style={{
+                textDecoration: item.completed ? "line-through" : "none",
+                cursor: "pointer"
+              }}
+            >
+              {item.text}
+            </span>
+
+            <button onClick={() => editItem(index)}>Edit</button>
+            <button onClick={() => deleteItem(index)}>Delete</button>
+
           </li>
         ))}
       </ul>
