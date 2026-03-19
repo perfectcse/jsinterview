@@ -1,19 +1,29 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function InputBox() {
 
+  // ✅ Load from localStorage (Lazy Initialization)
+  const [items, setItems] = useState(() => {
+    const saved = localStorage.getItem("todos");
+    return saved ? JSON.parse(saved) : [];
+  });
+
   const [text, setText] = useState("");
-  const [items, setItems] = useState([]);
   const [editIndex, setEditIndex] = useState(null);
 
-  // Add or Update item
+  // ✅ Save to localStorage whenever items change
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(items));
+  }, [items]);
+
+  // ➕ Add / Update Item
   const addItem = () => {
     if (text.trim() === "") return;
 
     if (editIndex !== null) {
-      const updatedItems = [...items];
-      updatedItems[editIndex] = text;
-      setItems(updatedItems);
+      const updated = [...items];
+      updated[editIndex].text = text;
+      setItems(updated);
       setEditIndex(null);
     } else {
       setItems([...items, { text, completed: false }]);
@@ -22,25 +32,25 @@ function InputBox() {
     setText("");
   };
 
-  // Delete item
+  // ❌ Delete Item
   const deleteItem = (index) => {
     setItems(items.filter((_, i) => i !== index));
   };
 
-  // Edit item
+  // ✏️ Edit Item
   const editItem = (index) => {
     setText(items[index].text);
     setEditIndex(index);
   };
 
-  // Toggle complete
+  // ✅ Toggle Complete
   const toggleComplete = (index) => {
-    const updatedItems = [...items];
-    updatedItems[index].completed = !updatedItems[index].completed;
-    setItems(updatedItems);
+    const updated = [...items];
+    updated[index].completed = !updated[index].completed;
+    setItems(updated);
   };
 
-  // Clear all
+  // 🧹 Clear All
   const clearAll = () => {
     setItems([]);
   };
@@ -48,7 +58,7 @@ function InputBox() {
   return (
     <div className="input-box">
 
-      <h2>App 🚀</h2>
+      <h2>Advanced Todo App 🚀</h2>
 
       <input
         type="text"
