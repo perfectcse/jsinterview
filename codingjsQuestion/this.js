@@ -38,8 +38,9 @@
 
 
 // 4. Difference in arguments Object
-function show(a, b) {
-    console.log(arguments.length);
-}
+//function show(a, b) {
+  //  console.log(arguments.length);
+//}
 
-show(10, 20, 30, 40);
+//show(10, 20, 30, 40);
+
