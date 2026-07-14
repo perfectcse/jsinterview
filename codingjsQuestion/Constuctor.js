@@ -1,4 +1,4 @@
-function user (a,b){
-          return a+b;
+function name (a,b){
+    return 5+8;
 }
-console.log(user(a,b));
+console.log(a,b);
