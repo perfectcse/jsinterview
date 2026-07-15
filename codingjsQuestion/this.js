@@ -44,3 +44,12 @@
 
 //show(10, 20, 30, 40);
 
+
+// Nommal function name
+function greet (){
+  console.log(this.name)
+}
+const user  = {
+  name: "Vishal"
+};
+greet.call(user);
