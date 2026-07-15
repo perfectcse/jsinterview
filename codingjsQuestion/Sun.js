@@ -43,9 +43,9 @@ user.greet();
 // Therefore, inside the normal greet method:
 // this === user 
 // then the arrow function 
-const showName = () => {
-    console.log(this.name);
-};
+//const showName = () => {
+  //  console.log(this.name);
+//};
 //  user.greet()
       
 //Normal greet function gets this = user
