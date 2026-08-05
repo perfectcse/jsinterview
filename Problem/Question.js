@@ -99,4 +99,22 @@ const boy =(name)=>{
     this.name=name;
 }
  new boy("Vishal");
-//console.log(vishal.name);
+
+// Question 14 
+const user={
+
+name:"Vishal",
+
+greet:()=>{
+
+console.log(this.name);
+
+}
+
+}
+
+user.greet();
+
+// It does not print "Vishal" because the arrow function doesn't create its own this. It inherits this from its surrounding scope instead of binding this to user.
+
+// Question 15 
