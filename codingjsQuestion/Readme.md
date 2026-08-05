@@ -1,10 +1,10 @@
-Week 1 – Closures
-✅ Create Hello World Function []
-✅ Counter []
-✅ To Be Or Not To Be []
-✅ Counter II []
-
-Week 2 – Basic Array Transformations
-✅Apply Transform Over Each Element in Array
-✅Filter Elements from Array
-✅Array Reduce Transformation
+✅ Module 1
+✅ Module 2
+✅ Module 3
+✅ Module 4
+🔄 Module 5 (Finish Today)
+⬜ Module 6 – Callback Functions
+⬜ Module 7 – Higher-Order Functions
+⬜ Module 8 – First-Class Functions
+⬜ Module 9 – Pure vs Impure Functions
+⬜ Module 10 – Recursion
