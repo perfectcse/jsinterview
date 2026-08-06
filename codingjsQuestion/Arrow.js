@@ -8,7 +8,7 @@ console.log(greet());
 const ball = () => {
     console.log("Hello");
 }
-console.log(ball());
+console.log(ball());    
 
 
 // Before ES6, developers often wrote code like this:
