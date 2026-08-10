@@ -170,3 +170,17 @@ const add = (...args) =>
 }
 add(10,20,30);
 // [10, 20, 30]
+
+//Find the Sum of Array Elements
+const sum = [10,25,7,40,15];
+const total = sum.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+console.log(total); // Output: 97
+
+const numbers =[10, 25, 7, 40, 15, 8];
+let even = 0;
+for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] % 2 === 0) {
+        even += numbers[i];
+    }
+}
+console.log(even); // Output: 58 (10 + 40 + 8)  
