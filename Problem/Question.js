@@ -100,53 +100,19 @@ const boy =(name)=>{
 }
  new boy("Vishal");
 
-// Question 14 
-const user={
 
-name:"Vishal",
-
-greet:()=>{
-
-console.log(this.name);
-
-}
-
-}
 
 user.greet();
 
 // It does not print "Vishal" because the arrow function doesn't create its own this. It inherits this from its surrounding scope instead of binding this to user.
 
-// Question 15 
-const user={
 
-name:"Vishal",
-
-greet(){
-
-const show=()=>{
-
-console.log(this.name);
-
-}
 
 show();
 
-}
 
-}
-// Using an arrow function here is usually not appropriate because it doesn't create its own this
-user.greet();
 
-const user = {
 
-    name: "Vishal",
-
-    greet() {
-        console.log(this.name);
-    }
-
-};
 
 // Arrow function express route
 app.get("/users",(req,res)=>{
