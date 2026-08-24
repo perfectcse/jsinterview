@@ -122,3 +122,26 @@ D callback executes
 
 
 setTimeout() callbacks execute later.
+
+
+Compare All three 
+
+1. Named callback
+
+function done() {
+    console.log("Done");
+}
+
+process(done);
+
+2. Asnonymous callback
+process(function () {
+    console.log("Done");
+});
+
+3. Arrow callback
+
+process(() => {
+    console.log("Done");
+});
+
