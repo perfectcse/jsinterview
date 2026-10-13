@@ -9,3 +9,5 @@ const result = numbers.reduce((acc, num) => {
 }, []);
 
 console.log(result);
+
+// Check condition → transform value → push transformed value into the accumulator.
